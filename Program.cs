@@ -1,4 +1,6 @@
 using JovemProgramador.Data;
+using JovemProgramador.Data.Repositorio.Interfaces;
+using JovemProgramador.Data.Repositorio;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,7 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 var connectionstring = builder.Configuration.GetConnectionString("StringConexao");
 builder.Services.AddDbContext<BancoContexto>(options => options.UseSqlServer(connectionstring));
+builder.Services.AddScoped<IAlunoRepositorio, AlunoRepositorio>();
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
