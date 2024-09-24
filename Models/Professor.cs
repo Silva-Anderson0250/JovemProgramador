@@ -9,6 +9,6 @@
 
         public string Cpf { get; set; }
 
-        public string Disiplina { get; set; }
+        public string Disciplina { get; set; }
     }
 }

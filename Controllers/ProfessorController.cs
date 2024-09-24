@@ -9,14 +9,14 @@ namespace JovemProgramador.Controllers
         private readonly IProfessorRepositorio _profressorRepositorio;
         public ProfessorController(IProfessorRepositorio professorRepositorio)
         {
-            _alunoRepositorio = alunoRepositorio;
+            _professorRepositorio = professorRepositorio;
         }
 
 
         public IActionResult Index()
         {
-            var aluno = _professorRepositorio.BuscarProfessor();
-            return View(Professor);
+            var professor = _professorRepositorio.BuscarProfessor();
+            return View(professor);
         }
         public IActionResult AdicionarProfessor()
         {
