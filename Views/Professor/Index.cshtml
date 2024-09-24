@@ -17,9 +17,9 @@
             foreach (Professor professor in Model)
             {
                 <tr>
-                    <td>@professor.Disciplina</td>
                     <td>@professor.Nome</td>
                     <td>@professor.Cpf </td>
+                    <td>@professor.Disciplina</td>
                     <td>
                         <div class="d-grid gap-2 d-md-block">
                             <a type="submit" class="btn btn-primary" role="button" asp-controller="Professor" asp-action="Editar" asp-route-id="@professor.Id">Editar</a>
