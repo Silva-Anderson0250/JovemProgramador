@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace JovemProgramador.Data.Mapeamento
 {
-    public class ProfessorMapeamento
+    public class ProfessorMapeamento : IEntityTypeConfiguration<Professor>
     {
         public void Configure(EntityTypeBuilder<Professor> builder)
         {

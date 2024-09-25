@@ -6,7 +6,9 @@ namespace JovemProgramador.Controllers
 {
     public class ProfessorController : Controller
     {
-        private readonly IProfessorRepositorio _profressorRepositorio;
+        private readonly IProfessorRepositorio _professorRepositorio;
+        
+
         public ProfessorController(IProfessorRepositorio professorRepositorio)
         {
             _professorRepositorio = professorRepositorio;
@@ -15,7 +17,7 @@ namespace JovemProgramador.Controllers
 
         public IActionResult Index()
         {
-            var professor = _professorRepositorio.BuscarProfessor();
+            var professor = _professorRepositorio.BuscarProfessores();
             return View(professor);
         }
         public IActionResult AdicionarProfessor()
